@@ -10,8 +10,8 @@ export async function POST(request: NextRequest) {
         }
 
         const client = new Client()
-            .setEndpoint(process.env.APPWRITE_ENDPOINT!)
-            .setProject(process.env.APPWRITE_PROJECT_ID!)
+            .setEndpoint(process.env.NEXT_PUBLIC_APPWRITE_ENDPOINT!)
+            .setProject(process.env.NEXT_PUBLIC_APPWRITE_PROJECT_ID!)
         
         const avatars = new Avatars(client)
 
@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
                     content: [
                         {
                             type: "text",
-                            text: "Roast this website hardcore based on the provided fullpage screenshot. Be funny, critical, and no-nonsense. Highlight design flaws, usability issues, and anything that screams 'noob'.",
+                            text: "Roast this website hardcore based on the provided fullpage screenshot. Be funny, critical, and no-nonsense. Highlight design flaws, usability issues, and anything that screams 'noob'. But don't just spam insult, but add actual stuff from the site and what can be improved",
                         },
                         {
                             type: "image_url",

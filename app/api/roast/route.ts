@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
             url: url.startsWith("http") ? url : `https://${url}`,
             width: 1280,
             height: 720,
-            fullpage: true
+            fullpage: false
         })
 
         const response = await fetch(screenshotResult)
